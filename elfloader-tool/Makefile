@@ -55,8 +55,6 @@ ASMFILES += $(sort $(patsubst $(SOURCE_DIR)/%,%,$(SOURCE_DIR)/src/binaries/efi/e
 CFILES   += $(sort $(patsubst $(SOURCE_DIR)/%,%,$(wildcard $(SOURCE_DIR)/src/binaries/efi/*.c)))
 endif
 
-LIBS = cpio
-
 NK_CFLAGS += -ffreestanding -Wall -Werror -W -Wextra
 
 ifeq ($(__ARM_32__), y)

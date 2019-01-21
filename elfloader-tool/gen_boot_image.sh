@@ -186,7 +186,7 @@ popd &>/dev/null
 #
 ${TOOLPREFIX}gcc ${CPPFLAGS} -P -E \
         -o "${SCRIPT_DIR}/linker.lds_pp" \
-        -x c "${SCRIPT_DIR}/linker.lds"
+        -x c "${SCRIPT_DIR}/src/arch-arm/linker.lds"
 
 TEXT_OPTION="--section-start .start="
 

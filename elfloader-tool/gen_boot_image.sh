@@ -90,6 +90,10 @@ case "$PLAT" in
         ENTRY_ADDR=0x20000000
         FORMAT=elf32-littlearm
         ;;
+    "bcm2711")
+        ENTRY_ADDR=0x20000000
+        FORMAT=elf32-littlearm
+        ;;
     *)
         echo "$0: Invalid platform \"$PLAT\""
         exit -1

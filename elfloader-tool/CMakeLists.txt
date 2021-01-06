@@ -129,7 +129,7 @@ set_property(TARGET elfloader APPEND_STRING PROPERTY LINK_FLAGS " -T ${CMAKE_CUR
 if (ElfloaderImageEFI)
     set_property(TARGET elfloader APPEND_STRING PROPERTY LINK_FLAGS " -pie ")
 else()
-    if(KernelPlatImx6 OR KernelPlatformRpi3)
+    if(KernelPlatImx6 OR KernelPlatformRpi3 OR KernelPlatformRpi4)
         set(PlatformEntryAddr 0x20000000)
     elseif(KernelPlatformKZM OR KernelPlatformOMAP3 OR KernelPlatformAM335X OR KernelPlatformImx7Sabre)
         set(PlatformEntryAddr 0x82000000)

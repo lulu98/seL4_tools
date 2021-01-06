@@ -40,7 +40,7 @@ shift 2
 case "$PLAT" in
     "imx31"|"imx6"|"imx7"|"omap3"|"am335x"|\
     "exynos4"|"exynos5"|"realview"|"apq8064"|\
-    "zynq7000"|"tk1"|"bcm2837")
+    "zynq7000"|"tk1"|"bcm2837"|"bcm2711")
         FORMAT=elf32-littlearm
         ;;
     "hikey"|"zynqmp")

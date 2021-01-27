@@ -232,6 +232,20 @@ ifeq ($(CONFIG_ARM_CORTEX_A57),y)
 	export RUST_ARCH_FEATURES += +v8
 endif
 
+ifeq ($(CONFIG_ARM_CORTEX_A72),y)
+	ccflags-y += $(call cc-option, -mtune=cortex-a72)
+	ccflags-y += $(call cc-option, -march=armv8-a)
+	asflags-y += $(call as-option, -Wa$(comma)-march=armv8-a)
+	asflags-y += $(call as-option, -Wa$(comma)-mtune=cortex-a72)
+	asflags-y += $(call as-option, -Wa$(comma)-mcpu=cortex-a72)
+	DEFINES += ARMV8_A
+	DEFINES += ARM_CORTEX_A72
+	export ARMV=armv8-a
+	export CPU=cortex-a72
+	export RUST_CPU = cortex-a72
+	export RUST_ARCH_FEATURES += +v8
+endif
+
 ifeq ($(CONFIG_ARCH_RISCV),y)
    ccflags-y += $(call cc-option, -Wno-error)
    DEFINES += ARCH_RISCV

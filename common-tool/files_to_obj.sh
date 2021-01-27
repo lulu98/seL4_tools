@@ -43,7 +43,7 @@ RELOCATABLE=-r
 case "$PLAT" in
     "imx31"|"imx6"|"imx7"|"omap3"|"am335x"|\
     "exynos4"|"exynos5"|"realview"|"apq8064"|\
-    "zynq7000"|"tk1"|"bcm2837"|"bcm2711")
+    "zynq7000"|"tk1"|"bcm2837")
         FORMAT=elf32-littlearm
         ;;
     "hikey"|"zynqmp")
@@ -54,7 +54,7 @@ case "$PLAT" in
             FORMAT=elf32-littlearm
         fi
         ;;
-    "tx1")
+    "tx1"|"bcm2711")
             FORMAT=elf64-littleaarch64
         ;;
     "pc99")
